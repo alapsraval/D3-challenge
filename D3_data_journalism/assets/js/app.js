@@ -21,10 +21,10 @@ var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Import Data
-d3.csv("assets/data/data.csv").then(function (healthData) {
+d3.csv("assets/data/data.csv").then(function (censusData) {
 
     // Convert Data from string to number
-    healthData.forEach(function (data) {
+    censusData.forEach(function (data) {
         data.healthcare = +data.healthcare;
         data.poverty = +data.poverty;
         data.income = +data.income;
@@ -32,11 +32,11 @@ d3.csv("assets/data/data.csv").then(function (healthData) {
 
     // Create scale functions
     var xLinearScale = d3.scaleLinear()
-        .domain([8, d3.max(healthData, d => d.poverty) + 2])
+        .domain([8, d3.max(censusData, d => d.poverty) + 2])
         .range([0, width]);
 
     var yLinearScale = d3.scaleLinear()
-        .domain([0, d3.max(healthData, d => d.healthcare) + 2])
+        .domain([0, d3.max(censusData, d => d.healthcare) + 2])
         .range([height, 0]);
 
     // Create axis functions
@@ -67,7 +67,7 @@ d3.csv("assets/data/data.csv").then(function (healthData) {
 
     // Create Circles
     var circlesGroup = chartGroup.selectAll("circle")
-        .data(healthData)
+        .data(censusData)
         .enter()
         .append("circle")
         .attr("cx", d => xLinearScale(d.poverty))
@@ -78,7 +78,7 @@ d3.csv("assets/data/data.csv").then(function (healthData) {
 
     // Include state abbreviations in the circles. 
     chartGroup.selectAll()
-        .data(healthData)
+        .data(censusData)
         .enter()
         .append("text")
         .attr("x", d => xLinearScale(d.poverty))
@@ -91,7 +91,7 @@ d3.csv("assets/data/data.csv").then(function (healthData) {
         .attr("class", "d3-tip")
         .offset([80, -60])
         .html(function (d) {
-            return (`<b>${d.state}</b><br>Poverty: ${d.poverty}%<br>Healthcare: ${d.healthcare}%`);
+            return (`<b>${d.state}</b><hr>Poverty: ${d.poverty}%<br>Healthcare: ${d.healthcare}%`);
         });
 
     // Create tooltip in the chart
