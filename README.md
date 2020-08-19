@@ -21,5 +21,3 @@ More demographics and risk factors are included, with additional labels in the s
 
 Tooltips are implemented using D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. 
 >`d3-tip.js` plugin used in this project is developed by [Justin Palmer](https://github.com/Caged)
-
-https://alapsraval.github.io/D3-data-journalism/
