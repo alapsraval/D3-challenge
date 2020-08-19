@@ -1,6 +1,10 @@
-# Data Journalism and D3
+# Data Journalism and D3 
 
-This is a web application that displays a scatter plot to analyze the health risks facing particular demographics using information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System. The following outlines the steps.
+This is a web application that displays a scatter plot to analyze the health risks facing particular demographics using information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System. 
+
+https://alapsraval.github.io/D3-data-journalism/
+
+The following outlines the steps.
 
 ## Step 1 - Scatter plot
 
@@ -17,3 +21,5 @@ More demographics and risk factors are included, with additional labels in the s
 
 Tooltips are implemented using D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. 
 >`d3-tip.js` plugin used in this project is developed by [Justin Palmer](https://github.com/Caged)
+
+https://alapsraval.github.io/D3-data-journalism/
