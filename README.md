@@ -4,10 +4,10 @@ This is a web application that displays a scatter plot to analyze the health ris
 
 ## Step 1
 
-Create a scatter plot between two of the data variables that represents each state with circle elements. 
+A scatter plot between two of the data variables that represents each state with circle elements. 
 * `app.js` file is used to pull in the data from `data.csv` by using the `d3.csv` function.
-* Include state abbreviations in the circles.
-* Create and situate axes and labels to the left and bottom of the chart.
+* State abbreviations are included in the circles.
+* Axes and labels are displayed to the left and bottom of the chart.
 
 - - -
 
